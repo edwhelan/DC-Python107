@@ -7,7 +7,6 @@ results = {}
 
 #Loop through all the words in the sentence
 for word in split_sentence:
-    print(word)
 #   if the word is already in the dictonary
     if word in results:
         results[str(word)] = results[str(word)] + 1
