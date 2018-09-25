@@ -36,3 +36,11 @@ for person in characters.characters:
         the_most_titles = len(person['titles'])
         
 print('%s has the most titles with %d' % (current_most, the_most_titles))
+
+#Detect if culture equals 'Valyrian'
+valyrian_counter = 0
+for person in characters.characters:
+    if person['culture'] == 'Valyrian':
+        valyrian_counter += 1
+
+print('There are %d characters of the Valyrian culture.' % (valyrian_counter))
