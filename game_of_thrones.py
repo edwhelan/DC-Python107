@@ -44,3 +44,12 @@ for person in characters.characters:
         valyrian_counter += 1
 
 print('There are %d characters of the Valyrian culture.' % (valyrian_counter))
+
+#Find out who plays the character 'Hot Pie'
+actor = ''
+for person in characters.characters:
+    if person['name'] == 'Hot Pie':
+        actor = person['playedBy']
+
+print('The character Hot Pie is played by %s' % (str(actor)))
+
