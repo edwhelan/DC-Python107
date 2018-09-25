@@ -16,16 +16,16 @@ for word in split_sentence:
 
 # print out the top 3 results from inputed dictonary
 
-results_standings = []
+### Set 3 counters for order of values
 number_1 = 0
 number_2 = 0
 number_3 = 0
-
+### set first second and third place
 third_place = ''
 second_place = ''
 first_place = ''
 
-
+### loop through and check for values
 for entries in results:
     if results[entries] > number_1:
         number_3 = number_2
@@ -34,17 +34,18 @@ for entries in results:
         second_place = first_place
         number_1 = results[entries]
         first_place = entries +': '+ str(results[entries])
-    elif results[entries] >= number_2 and results[entries] < number_1:
+    elif results[entries] > number_2 and results[entries] < number_1:
         number_3 = number_2
         third_place = second_place
         second_place = entries +': '+ str(results[entries])
     elif results[entries] > number_3 and results[entries] < number_2:
         number_3 = results[entries]
         third_place = entries + ': '+ str(results[entries])
+    else:
+        pass
     
  
-
+print('The top three words are: ')
 print(first_place)
 print(second_place)
 print(third_place)
-print(results_standings)
