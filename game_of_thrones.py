@@ -63,3 +63,12 @@ for person in characters.characters:
 print('There are this many chacters in the book but not in the show: %s' % (str(not_in_show)))
 
 
+#Produce a list of characters with the last name 'Targaryen'
+house_targaryen = []
+for person in characters.characters:
+    if 'Targaryen' in person['name']:
+        house_targaryen.append(person['name'])
+
+print(house_targaryen)
+
+
