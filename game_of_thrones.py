@@ -54,21 +54,28 @@ for person in characters.characters:
 print('The character Hot Pie is played by %s' % (str(actor)))
 
 #How many characters are not in the TV show
-not_in_show = 0
-in_show = len(characters.characters)
-for person in characters.characters:
-    if person['playedBy'] == ['']:
-        not_in_show +=1         
+def is_not_in_tv_show():
+    not_in_show = 0
+    in_show = len(characters.characters)
+    for person in characters.characters:
+        if person['playedBy'] == ['']:
+            not_in_show +=1         
 
-print('There are this many chacters in the book but not in the show: %s' % (str(not_in_show)))
+    return 'There are this many chacters in the book but not in the show: %s' % (str(not_in_show))
+
+with open('notintvshow.txt', 'w') as f:
+    f.write(is_not_in_tv_show())
 
 
 #Produce a list of characters with the last name 'Targaryen'
-house_targaryen = []
-for person in characters.characters:
-    if 'Targaryen' in person['name']:
-        house_targaryen.append(person['name'])
 
-print(house_targaryen)
+def is_in_house_targaryen():
+    house_targaryen = []
+    for person in characters.characters:
+        if 'Targaryen' in person['name']:
+            house_targaryen.append(person['name'])
 
+    return str(house_targaryen)
 
+with open('targaryen.txt', 'w') as f:
+    f.write(is_in_house_targaryen())
