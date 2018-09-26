@@ -14,6 +14,5 @@ phonebook_dict['Bob'] = '968-345-2345'
 
 
 for people in phonebook_dict:
-    print(people, end= ': ')
-    print(phonebook_dict[people])
+    print('%s: %s' % (people, phonebook_dict[people])  )
 

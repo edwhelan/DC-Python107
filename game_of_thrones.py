@@ -10,22 +10,23 @@ for person in characters.characters:
         dead_count += 1
 
 print(dead_count)
+#Function to detect how many names start with ALPHAZED
+def starts_with(letter):
+    how_many_start_alphazed = 0
+    for person in characters.characters:
+        if person['name'].startswith(letter):
+            how_many_start_alphazed += 1
+    return how_many_start_alphazed
+
+
 #Print how many characters start with the letter A
-how_many_start_alpha = 0
-for person in characters.characters:
-    if person['name'].startswith('A'):
-        how_many_start_alpha += 1
+starts_with_alpha = starts_with('A')
+print(starts_with_alpha)
 
-print(how_many_start_alpha)
+#   print how many characters start with the letter Z
+starts_with_zedd = starts_with('Z')
+print(starts_with_zedd)
 
-
-#print how many characters start with the letter Z
-how_many_start_zebra = 0
-for person in characters.characters:
-    if person['name'].startswith('Z'):
-        how_many_start_zebra += 1
-
-print(how_many_start_zebra)
 
 #detect who has the most titles and print that
 current_most = ''
@@ -49,7 +50,7 @@ print('There are %d characters of the Valyrian culture.' % (valyrian_counter))
 actor = ''
 for person in characters.characters:
     if person['name'] == 'Hot Pie':
-        actor = person['playedBy']
+        actor = person['playedBy'][0]
 
 print('The character Hot Pie is played by %s' % (str(actor)))
 
