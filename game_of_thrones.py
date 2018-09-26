@@ -53,3 +53,11 @@ for person in characters.characters:
 
 print('The character Hot Pie is played by %s' % (str(actor)))
 
+#How many characters are not in the TV show
+
+not_in_show = 0
+for person in characters.characters:
+    if person['tvSeries'] != '':
+        not_in_show += 1
+
+print('There are this many chacters in the book but not in the show: %s' % (str(not_in_show)))
